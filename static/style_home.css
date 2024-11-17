@@ -1,0 +1,167 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a4c9c, #4f2a73); /* Fondo morado azulado */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 15px;
+}
+
+/* Estilo de cabecera */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header a {
+    color: #b39ddb;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor de la tarea */
+.task-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Título y formulario */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #7c4dff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #7c4dff;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5e2dbf;
+}
+
+/* Lista de tareas */
+h3 {
+    font-size: 22px;
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    color: #b39ddb;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .task-container {
+        padding: 20px;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header span {
+        margin-bottom: 10px;
+    }
+
+    header a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

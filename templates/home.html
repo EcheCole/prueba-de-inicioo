@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_home.css') }}">
+</head>
+<body>
+    <header>
+        <span>Bienvenido, {{ username }}</span>
+        <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+        <a href="{{ url_for('edit_profile') }}">Editar perfil</a>
+    </header>
+
+    <div class="task-container">
+        <h2>Agregar tarea</h2>
+        <form method="POST">
+            <label for="title">Título de la tarea:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" required></textarea>
+            <button type="submit">Guardar tarea</button>
+        </form>
+
+        <h3>Tareas</h3>
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    <a href="{{ url_for('edit_task', task_id=task.id) }}">
+                        {{ task.title }}
+                    </a>
+                    <a href="{{ url_for('delete_task', task_id=task.id) }}">Eliminar</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

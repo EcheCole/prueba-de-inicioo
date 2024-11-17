@@ -1,0 +1,116 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a4c9c, #4f2a73); /* Fondo morado azulado */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 15px;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* Títulos y texto */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #7c4dff;
+    outline: none;
+}
+
+/* Botón de guardar */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #7c4dff;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5e2dbf;
+}
+
+/* Mensajes de error o éxito */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+}
+
+ul li.success {
+    background-color: #388e3c; /* Verde para éxito */
+}
+
+ul li.error {
+    background-color: #d32f2f; /* Rojo para errores */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}

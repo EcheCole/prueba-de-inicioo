@@ -1,0 +1,17 @@
+<div *ngIf="tasks.length > 0">
+    <ul>
+      <li *ngFor="let task of tasks">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <button (click)="editTask(task.id, 'Nuevo título', 'Nueva descripción')">Editar</button>
+        <button (click)="deleteTask(task.id)">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+  
+  <form (ngSubmit)="addTask(newTitle.value, newDescription.value)">
+    <input #newTitle type="text" placeholder="Título" required>
+    <textarea #newDescription placeholder="Descripción" required></textarea>
+    <button type="submit">Agregar tarea</button>
+  </form>
+  
